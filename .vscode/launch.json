@@ -1,0 +1,12 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Reflection Agent",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/agent/main.py",
+            "console": "integratedTerminal"
+        }
+    ]
+}
