@@ -1,0 +1,147 @@
+{
+  "START": {
+    "id": "START",
+    "type": "start",
+    "text": "Good evening. Let's look at your day.",
+    "next": "A1_OPEN"
+  },
+
+  "A1_OPEN": {
+    "id": "A1_OPEN",
+    "type": "question",
+    "text": "How would you describe today in one word?",
+    "options": [
+      {
+        "text": "Productive",
+        "next": "A1_Q1",
+        "signal": "axis1:internal"
+      },
+      {
+        "text": "Mixed",
+        "next": "A1_Q1",
+        "signal": "axis1:internal"
+      },
+      {
+        "text": "Tough",
+        "next": "A1_Q2",
+        "signal": "axis1:external"
+      },
+      {
+        "text": "Frustrating",
+        "next": "A1_Q2",
+        "signal": "axis1:external"
+      }
+    ]
+  },
+
+  "A1_Q1": {
+    "id": "A1_Q1",
+    "type": "question",
+    "text": "When something went well today, what made it happen?",
+    "options": [
+      {
+        "text": "I prepared well",
+        "next": "A1_REF_INT",
+        "signal": "axis1:internal"
+      },
+      {
+        "text": "I adapted on the fly",
+        "next": "A1_REF_INT",
+        "signal": "axis1:internal"
+      },
+      {
+        "text": "The team came through",
+        "next": "A1_REF_INT",
+        "signal": "axis1:external"
+      },
+      {
+        "text": "I got lucky",
+        "next": "A1_REF_EXT",
+        "signal": "axis1:external"
+      }
+    ]
+  },
+
+  "A1_Q2": {
+    "id": "A1_Q2",
+    "type": "question",
+    "text": "When things got difficult, what was your first instinct?",
+    "options": [
+      {
+        "text": "Figure out what I could control",
+        "next": "A1_REF_INT",
+        "signal": "axis1:internal"
+      },
+      {
+        "text": "Wait for someone to step in",
+        "next": "A1_REF_EXT",
+        "signal": "axis1:external"
+      },
+      {
+        "text": "Push through alone",
+        "next": "A1_REF_EXT",
+        "signal": "axis1:external"
+      },
+      {
+        "text": "Feel stuck",
+        "next": "A1_REF_EXT",
+        "signal": "axis1:external"
+      }
+    ]
+  },
+
+  "A1_REF_INT": {
+    "id": "A1_REF_INT",
+    "type": "reflection",
+    "text": "You noticed what you could control today. That's agency.",
+    "next": "BRIDGE_1_2"
+  },
+
+  "A1_REF_EXT": {
+    "id": "A1_REF_EXT",
+    "type": "reflection",
+    "text": "A tough day can make things feel outside your control. But somewhere, you made a choice.",
+    "next": "BRIDGE_1_2"
+  },
+
+  "BRIDGE_1_2": {
+    "id": "BRIDGE_1_2",
+    "type": "bridge",
+    "text": "Now let's shift from how you handled things to what you gave.",
+    "next": "A2_OPEN"
+  },
+
+  "A2_OPEN": {
+    "id": "A2_OPEN",
+    "type": "question",
+    "text": "Think about one interaction today. Were you giving or expecting?",
+    "options": [
+      {
+        "text": "I helped someone",
+        "next": "END",
+        "signal": "axis2:contribution"
+      },
+      {
+        "text": "I taught someone something",
+        "next": "END",
+        "signal": "axis2:contribution"
+      },
+      {
+        "text": "I needed support",
+        "next": "END",
+        "signal": "axis2:entitlement"
+      },
+      {
+        "text": "I felt overlooked",
+        "next": "END",
+        "signal": "axis2:entitlement"
+      }
+    ]
+  },
+
+  "END": {
+    "id": "END",
+    "type": "end",
+    "text": "See you tomorrow."
+  }
+}
