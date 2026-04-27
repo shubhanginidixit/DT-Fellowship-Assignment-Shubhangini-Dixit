@@ -1,6 +1,3 @@
-# Daily Reflection Tree Diagram
-
-```mermaid
 graph TD
 
 START --> A1_OPEN
