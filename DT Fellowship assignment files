@@ -1,0 +1,13 @@
+tree/
+   reflection-tree.json
+   tree-diagram.md
+
+agent/
+   main.py
+
+transcripts/
+   persona1.md
+   persona2.md
+
+write-up.md
+README.md
