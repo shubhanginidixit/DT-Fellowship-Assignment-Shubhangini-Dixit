@@ -1,0 +1,36 @@
+# Daily Reflection Tree Diagram
+
+```mermaid
+graph TD
+
+START --> A1_OPEN
+
+A1_OPEN -->|Productive/Mixed| A1_Q1
+A1_OPEN -->|Tough/Frustrating| A1_Q2
+
+A1_Q1 --> A1_REF_INT
+A1_Q1 --> A1_REF_EXT
+
+A1_Q2 --> A1_REF_INT
+A1_Q2 --> A1_REF_EXT
+
+A1_REF_INT --> BRIDGE_1_2
+A1_REF_EXT --> BRIDGE_1_2
+
+BRIDGE_1_2 --> A2_OPEN
+
+A2_OPEN --> A2_REF_CON
+A2_OPEN --> A2_REF_ENT
+
+A2_REF_CON --> BRIDGE_2_3
+A2_REF_ENT --> BRIDGE_2_3
+
+BRIDGE_2_3 --> A3_OPEN
+
+A3_OPEN --> A3_REF_SELF
+A3_OPEN --> A3_REF_OTHERS
+
+A3_REF_SELF --> SUMMARY
+A3_REF_OTHERS --> SUMMARY
+
+SUMMARY --> END
